@@ -11,3 +11,4 @@ edit/.grade/
 __pycache__/
 edit/renders/
 video/render.log
+preview/
