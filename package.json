@@ -1,0 +1,23 @@
+{
+  "name": "ff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lutfi1504/ff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lutfi1504/ff/issues"
+  },
+  "homepage": "https://github.com/lutfi1504/ff#readme",
+  "devDependencies": {
+    "hyperframes": "^0.8.198"
+  }
+}
