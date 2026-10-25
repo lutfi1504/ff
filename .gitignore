@@ -10,3 +10,4 @@ edit/.hyperframes/
 edit/.grade/
 __pycache__/
 edit/renders/
+video/render.log
