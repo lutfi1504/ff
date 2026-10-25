@@ -1,0 +1,32 @@
+<template>
+  <style>
+    :root { --gold: #d9b26a; --red: #e3262f; }
+
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .chip { position: absolute; left: 0; right: 0; top: 1060px; display: flex; justify-content: center; }
+    .chip-in { display: inline-flex; align-items: baseline; gap: 18px; padding: 22px 40px;
+      background: rgba(12, 12, 14, 0.8); border: 2px solid var(--gold); border-radius: 999px;
+      font-family: "Poppins", sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 0.01em;
+      color: #fff; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); }
+    .gold { color: var(--gold); }
+
+
+    #tiptop-word { position: absolute; left: 0; right: 0; top: 1000px; text-align: center;
+      font-family: "Archivo Black", sans-serif; font-size: 170px; letter-spacing: -0.01em; color: #fff;
+      text-shadow: 0 12px 50px rgba(0,0,0,0.55); }
+    #tiptop-word .gold { color: var(--gold); }
+
+  </style>
+  <div data-hf-id="hf-sn74" id="root" data-composition-id="tiptop" data-start="0" data-duration="1.66" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-z1ro" id="tiptop-word" class="clip" data-start="0.05" data-duration="1.61" data-track-index="0">
+      <span data-hf-id="hf-e8nt" id="tiptop-a">TIP</span> <span data-hf-id="hf-qs2n" id="tiptop-b" class="gold">TOP</span>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#tiptop-a", { x: -140, opacity: 0, filter: "blur(10px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out" }, 0.05);
+    tl.fromTo("#tiptop-b", { x: 140, opacity: 0, filter: "blur(10px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.32, ease: "expo.out" }, 0.15);
+    tl.to("#tiptop-word", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 1.44);
+    window.__timelines["tiptop"] = tl;
+  </script>
+</template>

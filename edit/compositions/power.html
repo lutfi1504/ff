@@ -1,0 +1,31 @@
+<template>
+  <style>
+    :root { --gold: #d9b26a; --red: #e3262f; }
+
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .chip { position: absolute; left: 0; right: 0; top: 1060px; display: flex; justify-content: center; }
+    .chip-in { display: inline-flex; align-items: baseline; gap: 18px; padding: 22px 40px;
+      background: rgba(12, 12, 14, 0.8); border: 2px solid var(--gold); border-radius: 999px;
+      font-family: "Poppins", sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 0.01em;
+      color: #fff; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); }
+    .gold { color: var(--gold); }
+
+
+    #power-flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+    #power-word { position: absolute; left: 0; right: 0; top: 960px; text-align: center;
+      font-family: "Archivo Black", sans-serif; font-size: 250px; letter-spacing: -0.02em; color: var(--red);
+      text-shadow: 0 16px 60px rgba(0,0,0,0.6); }
+
+  </style>
+  <div data-hf-id="hf-57gl" id="root" data-composition-id="power" data-start="0" data-duration="1.02" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-j9wo" id="power-flash" class="clip" data-start="0.04" data-duration="0.2" data-track-index="0"></div>
+    <div data-hf-id="hf-r1w9" id="power-word" class="clip" data-start="0.04" data-duration="0.98" data-track-index="1">POWER</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#power-flash", { opacity: 0.55 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0.04);
+    tl.fromTo("#power-word", { scale: 1.6, opacity: 0, filter: "blur(14px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, 0.04);
+    tl.to("#power-word", { opacity: 0, filter: "blur(10px)", duration: 0.16, ease: "power2.in" }, 0.84);
+    window.__timelines["power"] = tl;
+  </script>
+</template>

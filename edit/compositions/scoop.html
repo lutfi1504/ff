@@ -1,0 +1,27 @@
+<template>
+  <style>
+    :root { --gold: #d9b26a; --red: #e3262f; }
+
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    .chip { position: absolute; left: 0; right: 0; top: 1060px; display: flex; justify-content: center; }
+    .chip-in { display: inline-flex; align-items: baseline; gap: 18px; padding: 22px 40px;
+      background: rgba(12, 12, 14, 0.8); border: 2px solid var(--gold); border-radius: 999px;
+      font-family: "Poppins", sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 0.01em;
+      color: #fff; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); }
+    .gold { color: var(--gold); }
+
+
+  </style>
+  <div data-hf-id="hf-amd8" id="root" data-composition-id="scoop" data-start="0" data-duration="2.5" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-c5g7" id="scoop-chip" class="chip clip" data-start="0.05" data-duration="2.45" data-track-index="0">
+      <div data-hf-id="hf-og20" class="chip-in" id="scoop-in"><span data-hf-id="hf-0s0d">2 SCOOP</span><span data-hf-id="hf-4ob4" id="scoop-x2" class="gold">× 2 KALI</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#scoop-in", { scale: 0.7, opacity: 0, filter: "blur(6px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "back.out(1.3)" }, 0.05);
+    tl.fromTo("#scoop-x2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, 1.2);
+    tl.to("#scoop-in", { opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power2.in" }, 2.28);
+    window.__timelines["scoop"] = tl;
+  </script>
+</template>

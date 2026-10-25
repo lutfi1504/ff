@@ -1,1 +1,11 @@
 node_modules/
+# Source and working video (large binaries; source is in Google Drive)
+video/src/
+video/frames/
+video/transcribe.*.json
+video/transcribe.*.log
+video/captions_seg.json
+edit/assets/footage.mp4
+edit/.hyperframes/
+edit/.grade/
+__pycache__/
